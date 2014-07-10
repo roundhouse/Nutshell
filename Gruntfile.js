@@ -1,7 +1,7 @@
 /*!
- * LA Galaxy - Join or Die Gruntfile
- * http://joinordie.lagalaxy.com
- * @author Roundhouse
+ * Project Name
+ * http://projecturl.com
+ * @author OwlDesign
  */
 
 'use strict';
