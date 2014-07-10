@@ -46,7 +46,7 @@ module.exports = function(grunt) {
           dist: {
               options: {
                   // nested, compact, compressed, expanded
-                  style: 'expanded'
+                  style: 'compact'
               },
               files: {
                   '<%= cssDir %>/application.css': '<%= sassDir %>/application.scss'
