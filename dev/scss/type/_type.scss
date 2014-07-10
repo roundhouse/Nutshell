@@ -1,0 +1,52 @@
+// -------------------------------
+/* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★ */
+/* ★ Typography                 */
+/* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★ */
+// -------------------------------
+
+// Variables
+$baseFontSize: 16px;
+$baseLineHeight: 1;
+
+// Google Fonts
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+// Custom Fonts
+//@include font-face(SourceSansPro, '/fonts/Source_Sans_Pro/SourceSansPro-Regular');
+
+// Fonts
+$arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$helvetica: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+// Headers
+$headers: 
+  (h-01, 24px, $baseLineHeight, $helvetica),
+  (h-02, 18px, $baseLineHeight, $helvetica);
+
+.heading {
+  color: $colorMain;
+  @each $header, $fontSize, $lineHeight, $fontName in $headers {
+    &.#{$header} {
+      font: {
+        family: $fontName;
+        size: $fontSize;
+      }
+      line-height: $lineHeight;
+    }
+  }
+}
+
+// Copy
+$copies: 
+  (copy-01, 14px, $baseLineHeight, $helvetica),
+  (copy-03, 11px, $baseLineHeight, $helvetica);
+
+@each $copy, $fontSize, $lineHeight, $fontName in $copies {
+  .#{$copy} {
+    font: {
+      family: $fontName;
+      size: $fontSize;
+    }
+    line-height: $lineHeight;
+  }
+}

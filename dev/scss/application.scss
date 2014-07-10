@@ -1,0 +1,50 @@
+// =====================================
+// ★
+// ★ Theme Name: Theme Title
+// ★ Category: HTML Template
+// ★ Technologies: HTML, css3, jquery, isotopes
+// ★ Version: 1.0
+// ★ Author: First Last (@twitterusername) 
+// ★ Date: Month Day, Year  
+// ★
+// =====================================
+
+
+
+// -------------------------------------
+// ★ Core
+// -------------------------------------
+// 3rd Party Libraries
+@import "lib/bourbon/bourbon"; // Mixins, functions, etc https://github.com/thoughtbot/bourbon
+@import "grid-settings"; // Grids settings
+@import "lib/neat/neat"; // Grids, etc https://github.com/thoughtbot/neat
+
+// Variables
+@import "variables"; // Variables, mixins, settings, etc
+
+// Shared Styles
+@import "shared"; // Shared styles
+
+// Responsive
+@import "responsive"; // Responsive styles | Optional
+
+// -------------------------------------
+// ★ Layout
+// -------------------------------------
+@import "layout/layout"; // Layotus, etc
+
+// -------------------------------------
+// ★ Typography
+// -------------------------------------
+@import "type/type"; // Typography, Headers, paragraphs, etc
+
+// -------------------------------------
+// ★ Components
+// -------------------------------------
+@import "components/form"; // Form styles
+@import "components/buttons"; // Button styles
+
+// -------------------------------------
+// ★ Components
+// -------------------------------------
+@import "pages/home-page"; // Home Page
