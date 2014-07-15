@@ -1,125 +1,45 @@
 @charset "UTF-8";
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+/** Map set  @param 	Map 	$map 		The map to use @param 	String 	$key 		The key to update @param 	Mixed 	$value 		The new value @return 	Map 			The new map */
+/** Get the column width in percent for the global or a specific context  @param 	int 		$columns 					The number of columns to calculate @param 	int 		$context : $gridle-columns-count 	 	The context to use @return 	percentage 							The width in percent */
+/** Get a state map  @param 	string 		$name 		The name of the state to get @return 	map 				A state map object */
+/** Check if a state exist :  @param 	string 		$name 		The name of the state to check @return 	Boolean 			true is exist */
+/** Get the media queries variables :  @param 	int 		$index 	 	The media query indes @param 	String 		$var 		The media query variable name @return 	String|int 			The variable value */
+/** Get a variable  @param 	String 		$varName 				The variable name @param  	String 		$stateMap-or-stateName 	 	The state name or a map state value @return 	Mixed 							The finded value */
+/** Set a variable in a state @param 	Mixed $stateName-or-stateIndex 	The state name of state index @param  	String $var                    		Variable name to assign @param  	Mixed $newValue          		The new value to assign @return 	List                         			The states list (full) */
+/** Generate a column  @param 	String 		$name 			The column name (often count) @param 	int 		$columns 		The column count that the column will take @param 	int 		$context 		The context on witch the with will be calculed @param 	Boolean 	$generateClasses 	Set if the column has to be generated in css */
+/** Generate classname  @param 	List 		$parrern 	The pattern to use to generate classname @param 	String 		$state 		The state @param 	int 		$count 		The column count */
+/** Get the media query for a particular state, or with, etc...  @param 	Mixed 		$state-or-min-width 		The state name of the min with @param 	Mixed 		$max-width 			The max width if first param is a min width @return 	String 						The media query string without the @media */
+/** Get states count  @return 	int 	The number of states defined */
+/** Setup */
+/** Register a clear each class */
+/** Register a special class */
+/** Register default states */
+/** Register default mobile first states : */
+/** Set the debug device (not used for now)  @param 	String 		$state 		The state to update @para m 	String 		$device 	The device to use (iphone, etc...) */
+/** Parent clear each */
+/** Vertical align : */
+/** Show inline  @param 	String 		$state 		The state name */
+/** Generate a custom class for all the states  @param 	list 	$pattern 		The name pattern of the class @param 	list 	$statesNames 		The states names to generate */
+a { text-decoration: none; }
 
-body:before {
-  content: '';
-  display: inline-block;
-  background-image: -webkit-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 7.56303%, transparent 7.56303%, transparent 8.40336%, #eeeeee 8.40336%, #eeeeee 15.96639%, transparent 15.96639%, transparent 16.80672%, #eeeeee 16.80672%, #eeeeee 24.36975%, transparent 24.36975%, transparent 25.21008%, #eeeeee 25.21008%, #eeeeee 32.77311%, transparent 32.77311%, transparent 33.61345%, #eeeeee 33.61345%, #eeeeee 41.17647%, transparent 41.17647%, transparent 42.01681%, #eeeeee 42.01681%, #eeeeee 49.57983%, transparent 49.57983%, transparent 50.42017%, #eeeeee 50.42017%, #eeeeee 57.98319%, transparent 57.98319%, transparent 58.82353%, #eeeeee 58.82353%, #eeeeee 66.38655%, transparent 66.38655%, transparent 67.22689%, #eeeeee 67.22689%, #eeeeee 74.78992%, transparent 74.78992%, transparent 75.63025%, #eeeeee 75.63025%, #eeeeee 83.19328%, transparent 83.19328%, transparent 84.03361%, #eeeeee 84.03361%, #eeeeee 91.59664%, transparent 91.59664%, transparent 92.43697%, #eeeeee 92.43697%, #eeeeee 100.0%, transparent 100.0%);
-  background-image: -moz-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 7.56303%, transparent 7.56303%, transparent 8.40336%, #eeeeee 8.40336%, #eeeeee 15.96639%, transparent 15.96639%, transparent 16.80672%, #eeeeee 16.80672%, #eeeeee 24.36975%, transparent 24.36975%, transparent 25.21008%, #eeeeee 25.21008%, #eeeeee 32.77311%, transparent 32.77311%, transparent 33.61345%, #eeeeee 33.61345%, #eeeeee 41.17647%, transparent 41.17647%, transparent 42.01681%, #eeeeee 42.01681%, #eeeeee 49.57983%, transparent 49.57983%, transparent 50.42017%, #eeeeee 50.42017%, #eeeeee 57.98319%, transparent 57.98319%, transparent 58.82353%, #eeeeee 58.82353%, #eeeeee 66.38655%, transparent 66.38655%, transparent 67.22689%, #eeeeee 67.22689%, #eeeeee 74.78992%, transparent 74.78992%, transparent 75.63025%, #eeeeee 75.63025%, #eeeeee 83.19328%, transparent 83.19328%, transparent 84.03361%, #eeeeee 84.03361%, #eeeeee 91.59664%, transparent 91.59664%, transparent 92.43697%, #eeeeee 92.43697%, #eeeeee 100.0%, transparent 100.0%);
-  background-image: -ms-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 7.56303%, transparent 7.56303%, transparent 8.40336%, #eeeeee 8.40336%, #eeeeee 15.96639%, transparent 15.96639%, transparent 16.80672%, #eeeeee 16.80672%, #eeeeee 24.36975%, transparent 24.36975%, transparent 25.21008%, #eeeeee 25.21008%, #eeeeee 32.77311%, transparent 32.77311%, transparent 33.61345%, #eeeeee 33.61345%, #eeeeee 41.17647%, transparent 41.17647%, transparent 42.01681%, #eeeeee 42.01681%, #eeeeee 49.57983%, transparent 49.57983%, transparent 50.42017%, #eeeeee 50.42017%, #eeeeee 57.98319%, transparent 57.98319%, transparent 58.82353%, #eeeeee 58.82353%, #eeeeee 66.38655%, transparent 66.38655%, transparent 67.22689%, #eeeeee 67.22689%, #eeeeee 74.78992%, transparent 74.78992%, transparent 75.63025%, #eeeeee 75.63025%, #eeeeee 83.19328%, transparent 83.19328%, transparent 84.03361%, #eeeeee 84.03361%, #eeeeee 91.59664%, transparent 91.59664%, transparent 92.43697%, #eeeeee 92.43697%, #eeeeee 100.0%, transparent 100.0%);
-  background-image: -o-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 7.56303%, transparent 7.56303%, transparent 8.40336%, #eeeeee 8.40336%, #eeeeee 15.96639%, transparent 15.96639%, transparent 16.80672%, #eeeeee 16.80672%, #eeeeee 24.36975%, transparent 24.36975%, transparent 25.21008%, #eeeeee 25.21008%, #eeeeee 32.77311%, transparent 32.77311%, transparent 33.61345%, #eeeeee 33.61345%, #eeeeee 41.17647%, transparent 41.17647%, transparent 42.01681%, #eeeeee 42.01681%, #eeeeee 49.57983%, transparent 49.57983%, transparent 50.42017%, #eeeeee 50.42017%, #eeeeee 57.98319%, transparent 57.98319%, transparent 58.82353%, #eeeeee 58.82353%, #eeeeee 66.38655%, transparent 66.38655%, transparent 67.22689%, #eeeeee 67.22689%, #eeeeee 74.78992%, transparent 74.78992%, transparent 75.63025%, #eeeeee 75.63025%, #eeeeee 83.19328%, transparent 83.19328%, transparent 84.03361%, #eeeeee 84.03361%, #eeeeee 91.59664%, transparent 91.59664%, transparent 92.43697%, #eeeeee 92.43697%, #eeeeee 100.0%, transparent 100.0%);
-  background-image: linear-gradient(to left, transparent 0, #eeeeee 0, #eeeeee 7.56303%, transparent 7.56303%, transparent 8.40336%, #eeeeee 8.40336%, #eeeeee 15.96639%, transparent 15.96639%, transparent 16.80672%, #eeeeee 16.80672%, #eeeeee 24.36975%, transparent 24.36975%, transparent 25.21008%, #eeeeee 25.21008%, #eeeeee 32.77311%, transparent 32.77311%, transparent 33.61345%, #eeeeee 33.61345%, #eeeeee 41.17647%, transparent 41.17647%, transparent 42.01681%, #eeeeee 42.01681%, #eeeeee 49.57983%, transparent 49.57983%, transparent 50.42017%, #eeeeee 50.42017%, #eeeeee 57.98319%, transparent 57.98319%, transparent 58.82353%, #eeeeee 58.82353%, #eeeeee 66.38655%, transparent 66.38655%, transparent 67.22689%, #eeeeee 67.22689%, #eeeeee 74.78992%, transparent 74.78992%, transparent 75.63025%, #eeeeee 75.63025%, #eeeeee 83.19328%, transparent 83.19328%, transparent 84.03361%, #eeeeee 84.03361%, #eeeeee 91.59664%, transparent 91.59664%, transparent 92.43697%, #eeeeee 92.43697%, #eeeeee 100.0%, transparent 100.0%);
-  height: 100%;
-  left: 0;
-  margin: 0 auto;
-  max-width: 66.875em;
-  opacity: 0.4;
-  position: fixed;
-  right: 0;
-  width: 100%;
-  pointer-events: none;
-  z-index: -1;
-}
-@media screen and (max-width: 768px) {
-  body:before {
-    background-image: -webkit-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 15.25424%, transparent 15.25424%, transparent 16.94915%, #eeeeee 16.94915%, #eeeeee 32.20339%, transparent 32.20339%, transparent 33.89831%, #eeeeee 33.89831%, #eeeeee 49.15254%, transparent 49.15254%, transparent 50.84746%, #eeeeee 50.84746%, #eeeeee 66.10169%, transparent 66.10169%, transparent 67.79661%, #eeeeee 67.79661%, #eeeeee 83.05085%, transparent 83.05085%, transparent 84.74576%, #eeeeee 84.74576%, #eeeeee 100.0%, transparent 100.0%);
-    background-image: -moz-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 15.25424%, transparent 15.25424%, transparent 16.94915%, #eeeeee 16.94915%, #eeeeee 32.20339%, transparent 32.20339%, transparent 33.89831%, #eeeeee 33.89831%, #eeeeee 49.15254%, transparent 49.15254%, transparent 50.84746%, #eeeeee 50.84746%, #eeeeee 66.10169%, transparent 66.10169%, transparent 67.79661%, #eeeeee 67.79661%, #eeeeee 83.05085%, transparent 83.05085%, transparent 84.74576%, #eeeeee 84.74576%, #eeeeee 100.0%, transparent 100.0%);
-    background-image: -ms-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 15.25424%, transparent 15.25424%, transparent 16.94915%, #eeeeee 16.94915%, #eeeeee 32.20339%, transparent 32.20339%, transparent 33.89831%, #eeeeee 33.89831%, #eeeeee 49.15254%, transparent 49.15254%, transparent 50.84746%, #eeeeee 50.84746%, #eeeeee 66.10169%, transparent 66.10169%, transparent 67.79661%, #eeeeee 67.79661%, #eeeeee 83.05085%, transparent 83.05085%, transparent 84.74576%, #eeeeee 84.74576%, #eeeeee 100.0%, transparent 100.0%);
-    background-image: -o-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 15.25424%, transparent 15.25424%, transparent 16.94915%, #eeeeee 16.94915%, #eeeeee 32.20339%, transparent 32.20339%, transparent 33.89831%, #eeeeee 33.89831%, #eeeeee 49.15254%, transparent 49.15254%, transparent 50.84746%, #eeeeee 50.84746%, #eeeeee 66.10169%, transparent 66.10169%, transparent 67.79661%, #eeeeee 67.79661%, #eeeeee 83.05085%, transparent 83.05085%, transparent 84.74576%, #eeeeee 84.74576%, #eeeeee 100.0%, transparent 100.0%);
-    background-image: linear-gradient(to left, transparent 0, #eeeeee 0, #eeeeee 15.25424%, transparent 15.25424%, transparent 16.94915%, #eeeeee 16.94915%, #eeeeee 32.20339%, transparent 32.20339%, transparent 33.89831%, #eeeeee 33.89831%, #eeeeee 49.15254%, transparent 49.15254%, transparent 50.84746%, #eeeeee 50.84746%, #eeeeee 66.10169%, transparent 66.10169%, transparent 67.79661%, #eeeeee 67.79661%, #eeeeee 83.05085%, transparent 83.05085%, transparent 84.74576%, #eeeeee 84.74576%, #eeeeee 100.0%, transparent 100.0%);
-  }
-}
-@media screen and (max-width: 480px) {
-  body:before {
-    background-image: -webkit-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 47.36842%, transparent 47.36842%, transparent 52.63158%, #eeeeee 52.63158%, #eeeeee 100%, transparent 100%);
-    background-image: -moz-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 47.36842%, transparent 47.36842%, transparent 52.63158%, #eeeeee 52.63158%, #eeeeee 100%, transparent 100%);
-    background-image: -ms-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 47.36842%, transparent 47.36842%, transparent 52.63158%, #eeeeee 52.63158%, #eeeeee 100%, transparent 100%);
-    background-image: -o-linear-gradient(left, transparent 0, #eeeeee 0, #eeeeee 47.36842%, transparent 47.36842%, transparent 52.63158%, #eeeeee 52.63158%, #eeeeee 100%, transparent 100%);
-    background-image: linear-gradient(to left, transparent 0, #eeeeee 0, #eeeeee 47.36842%, transparent 47.36842%, transparent 52.63158%, #eeeeee 52.63158%, #eeeeee 100%, transparent 100%);
-  }
-}
+.site-inner { position: relative; width: 60em; margin-left: auto; margin-right: auto; }
 
-a {
-  text-decoration: none;
-}
-
-.site-inner {
-  position: relative;
-  width: 60em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.site-inner-abs {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 60em;
-  margin-left: -30em;
-}
+.site-inner-abs { position: absolute; top: 0; left: 50%; width: 60em; margin-left: -30em; }
 
 /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★ */
 /* ★ Typography                 */
 /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★ */
-.heading {
-  color: dimgray;
-}
-.heading.h-01 {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 24px;
-  line-height: 1;
-}
-.heading.h-02 {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 18px;
-  line-height: 1;
-}
+.heading { color: dimgray; }
+.heading.h-01 { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 24px; line-height: 1; }
+.heading.h-02 { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 18px; line-height: 1; }
 
-.copy-01 {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 14px;
-  line-height: 1;
-}
+.copy-01 { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 14px; line-height: 1; }
 
-.copy-03 {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 11px;
-  line-height: 1;
-}
+.copy-03 { font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 11px; line-height: 1; }
 
-.button {
-  display: inline-block;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-  padding: 10px 15px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.button.success {
-  background: green;
-  color: white;
-}
-.button.danger {
-  background: red;
-  color: white;
-}
-.button.warning {
-  background: yellow;
-  color: white;
-}
-.button.rounded {
-  border-radius: 3px;
-}
-.button:hover {
-  opacity: 0.7;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=” $value * 100 “)";
-  filter: alpha(opacity=70);
-  zoom: 1;
-}
+.button { display: inline-block; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 12px; font-weight: 400; text-transform: uppercase; padding: 10px 15px; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+.button.success { background: green; color: white; }
+.button.danger { background: red; color: white; }
+.button.warning { background: yellow; color: white; }
+.button.rounded { border-radius: 3px; }
+.button:hover { opacity: 0.7; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=” $value * 100 “)"; filter: alpha(opacity=70); zoom: 1; }
