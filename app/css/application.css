@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.site-inner:after { content: ""; display: table; clear: both; }
+
+.site-inner { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
 /** Map set  @param 	Map 	$map 		The map to use @param 	String 	$key 		The key to update @param 	Mixed 	$value 		The new value @return 	Map 			The new map */
 /** Get the column width in percent for the global or a specific context  @param 	int 		$columns 					The number of columns to calculate @param 	int 		$context : $gridle-columns-count 	 	The context to use @return 	percentage 							The width in percent */
 /** Get a state map  @param 	string 		$name 		The name of the state to get @return 	map 				A state map object */

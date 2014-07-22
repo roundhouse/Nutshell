@@ -9,21 +9,8 @@
   text-rendering: optimizeLegibility;
 }
 
-// Responsive Breakpoints
-@mixin breakpoint($point) {
-  @if $point == desktop {
-    @media (max-width: $desktop) { @content; }
-  }
-  @else if $point == tablet {
-    @media (max-width: $tablet) { @content; }
-  }
-  @else if $point == mobile {
-    @media (max-width: $mobile)  { @content; }
-  }
-}
-
 // Opacity Mixin
-@mixin opacity ( $value: 0.5 ) {
+@mixin opacity($value: 0.5) {
   opacity: $value;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=” $value * 100 “)";
   filter: alpha(opacity= $value * 100 );
@@ -33,9 +20,9 @@
 // Kill Flicker 
 @mixin killflicker {
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility:    hidden;
-  -ms-backface-visibility:     hidden;
-  backface-visibility:     hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 // Pointer Event
@@ -44,5 +31,3 @@
   -moz-pointer-events: $value;
   pointer-events: $value;
 }
-
-

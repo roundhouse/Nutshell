@@ -1,13 +1,9 @@
 loadApplication = ->
   console.log 'Application Loaded'
-  $(svgInjector)
+  $(example)
 
-svgInjector = ->
-  console.log 'svg injector loaded'
-  mySVGsToInject = document.querySelectorAll("img.inject-me")
-  SVGInjector mySVGsToInject
+example = ->
+  console.log 'example loaded'
 
 
-
-  
 $(loadApplication)

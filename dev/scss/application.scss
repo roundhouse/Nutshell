@@ -1,11 +1,11 @@
 // =====================================
 // ★
-// ★ Theme Name: Theme Title
-// ★ Category: HTML Template
-// ★ Technologies: HTML, css3, jquery, isotopes
+// ★ Theme Name: Nutshell
+// ★ Category: HTML5 Framework
+// ★ Technologies: HTML5, CSS3, jQuery, Coffeescript, SCSS
 // ★ Version: 1.0
-// ★ Author: First Last (@twitterusername) 
-// ★ Date: Month Day, Year  
+// ★ Author: Vadim Goncharov (@owldesign) 
+// ★ Date: 7.22.14
 // ★
 // =====================================
 
@@ -19,13 +19,19 @@
 @import "lib/grid/gridle"; // Grids, etc https://github.com/olivierbossel/gridle
 @import "grid-settings"; // Grids settings
 
-// Variables
+// -------------------------------------
+// ★ Variables
+// -------------------------------------
 @import "variables"; // Variables, mixins, settings, etc
 
-// Shared Styles
+// -------------------------------------
+// ★ Shared
+// -------------------------------------
 @import "shared"; // Shared styles
 
-// Responsive
+// -------------------------------------
+// ★ Responsive
+// -------------------------------------
 @import "responsive"; // Responsive styles | Optional
 
 // -------------------------------------
@@ -36,7 +42,7 @@
 // -------------------------------------
 // ★ Typography
 // -------------------------------------
-@import "type/type"; // Typography, Headers, paragraphs, etc
+@import "typography/typography"; // Typography, Headers, paragraphs, etc
 
 // -------------------------------------
 // ★ Components

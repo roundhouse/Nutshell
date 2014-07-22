@@ -1,16 +1,13 @@
 (function() {
-  var loadApplication, svgInjector;
+  var example, loadApplication;
 
   loadApplication = function() {
     console.log('Application Loaded');
-    return $(svgInjector);
+    return $(example);
   };
 
-  svgInjector = function() {
-    var mySVGsToInject;
-    console.log('svg injector loaded');
-    mySVGsToInject = document.querySelectorAll("img.inject-me");
-    return SVGInjector(mySVGsToInject);
+  example = function() {
+    return console.log('example loaded');
   };
 
   $(loadApplication);
