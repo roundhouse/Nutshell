@@ -37,10 +37,10 @@ module.exports = (grunt) ->
       compile:
         options:
           compress: false
-          sourcemap: 'file' # none, file, inline, none
+          sourcemap: 'none' # none, file, inline, none
           style: 'compressed' # nested, compact, compressed, expanded
         files: 
-          '<%= DistributionDirectory %>/css/application.min.css': '<%= ScssDirectory %>/application.scss'
+          '<%= DistributionDirectory %>/css/application.css': '<%= ScssDirectory %>/application.scss'
 
     # =============================================
     # COFFEE COMPILING

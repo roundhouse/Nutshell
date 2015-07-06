@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAIA,WAAY,CACV,QAAQ,CAAE,QAAQ,CAClB,KAAK,CCAK,KAAK,CDCf,WAAW,CAAE,IAAI,CACjB,YAAY,CAAE,IAAI,CEJpB,2TAAoB,CAClB,MAAM,CAAE,cAAc,CAGxB,uzBAC0B,CACxB,MAAM,CAAE,cAAc,CAGxB,2aAA2B,CACzB,MAAM,CAAE,cAAc",
-"sources": ["file:///Users/roundhouse/Sites/nutshell/dev/scss/layout/_layout.scss","file:///Users/roundhouse/Sites/nutshell/dev/scss/_variables.scss","file:///Users/roundhouse/Sites/nutshell/dev/scss/components/_form.scss"],
-"names": [],
-"file": "application.min.css"
-}
