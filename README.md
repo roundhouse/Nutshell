@@ -1,6 +1,7 @@
 ![image](http://od-github.s3.amazonaws.com/nutshell-logo.png)
 
 [![image](https://img.shields.io/badge/version-0.0.1-brightgreen.svg)](https://github.com/owldesign/Nutshell)
+[![image](https://img.shields.io/packagist/v/owldesign/nutshell.svg)](https://packagist.org/packages/owldesign/nutshell)
 [![image](https://img.shields.io/github/license/mashape/apistatus.svg)](http://opensource.org/licenses/MIT)
 
 ***
