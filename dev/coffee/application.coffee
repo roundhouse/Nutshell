@@ -4,7 +4,7 @@ loadApplication = ->
   $(example)
 
 example = ->
-  console.log 'example loaded'
+  console.log 'Happy Coding!'
 
 
 $(loadApplication)

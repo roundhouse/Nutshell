@@ -1,13 +1,13 @@
-// -------------------------------------
-// ★ Variables
-// -------------------------------------
+/* ============================================ *
+ * Variables
+ * ============================================ */
 @import "mixins"; // Custom mixins, functions, etc
 
 // Sizes
-$max-width: em(960);
-$desktop: em(960);
-$tablet: em(767);
-$mobile: em(479);
+$max-width: 960px;
+$desktop: 960px;
+$tablet: 767px;
+$mobile: 479px;
 
 // Colors
-$colorMain: #696969;
+$c-gray: #696969;
