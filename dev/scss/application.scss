@@ -13,18 +13,13 @@
 // Variables
 @import "variables"; // Variables, mixins, settings, etc
 
-// Responsive
-@import "responsive"; // Responsive styles | Optional
-
-// Layout
-@import "layout/layout"; // Layotus, etc
-
-// Typography
-@import "typography/typography"; // Typography, Headers, paragraphs, etc
-
 // Components
+@import "components/typography"; // Typography, Headers, paragraphs, etc
 @import "components/form"; // Form styles
 @import "components/buttons"; // Button styles
 
 // Content
 @import "content/pages"; // Pages styles
+
+// Responsive
+@import "responsive"; // Responsive styles | Optional
