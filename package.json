@@ -5,7 +5,7 @@
   "author": "Vadim Goncharov",
   "version": "0.0.1",
   "devDependencies": {
-    "grunt": "~0.4.5",
+    "grunt": "~1.0.1",
     "grunt-contrib-sass": "~1.0.0",
     "grunt-contrib-coffee": "~1.0.0",
     "grunt-contrib-watch": "~1.0.0",
